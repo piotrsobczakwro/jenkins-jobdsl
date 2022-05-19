@@ -14,7 +14,7 @@ pipeline {
         script {
           def name = "Peter"
           // if statement in groovy
-          if name == "Peter"
+          if(name == "Peter")
             println("Hi,${name}")
           else
             println("You are not Peter")

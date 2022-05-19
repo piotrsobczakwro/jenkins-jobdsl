@@ -2,7 +2,9 @@ pipeline {
   //agent any
   agent {
     node {
+        // Declared label
         label "master_node1"
+        //Declared custom workspace
         customWorkspace "/home/helloworld"
     }
   }

@@ -2,11 +2,9 @@ pipeline {
   //agent any
   agent {
     node {
-        label "master_node"
+        label "master_node1"
         customWorkspace "/home/helloworld"
     }
-    label "master_node"
-    customWorkspace "/home/helloworld"
   }
   stages{
     stage("build") {

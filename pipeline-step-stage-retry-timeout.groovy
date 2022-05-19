@@ -17,6 +17,7 @@ pipeline {
             // if statement in groovy
             if(name == "Peter")
               println("Hi,${name}")
+              error "in retry"
             else
               println("You are not Peter")
         }

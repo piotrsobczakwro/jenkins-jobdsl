@@ -12,17 +12,11 @@ pipeline {
     stage("Build") {
       steps {
         retry(3) {
-          script {
-            def name = "Peter"
-            // if statement in groovy
-            if(name == "Peter")
-              println("Hi,${name}")
-              error "in retry"
-            else
-              println("You are not Peter")
+          echo "Retry option"
+          error "error in retry"
         }
-        sleep 10
-        echo "Hello world after 10secounds "
+        sleep 2
+        echo "afer retry "
         }
       }
     }

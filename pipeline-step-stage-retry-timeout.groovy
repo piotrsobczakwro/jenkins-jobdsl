@@ -24,6 +24,7 @@ pipeline {
           timeout(time: 10, unit:'SECONDS') {
             echo "Sleeping in timeout"
             sleep 12
+        }
       }
     }
   }

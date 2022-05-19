@@ -15,7 +15,7 @@ pipeline {
         retry(3) {
           echo "Retry option"
           //error in retry
-          error "error in retry"
+          //error "error in retry"
         }
       }
     }

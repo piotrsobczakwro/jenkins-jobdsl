@@ -9,7 +9,7 @@ pipeline {
     }
   }
   stages {
-    stage("Build") {
+    stage("Retry") {
       steps {
         //retry option
         retry(3) {
@@ -17,12 +17,12 @@ pipeline {
           //error in retry
           error "error in retry"
         }
-        sleep 2
-        echo "afer retry "
-        timeout(time: 10, unit:'SECONDS')
-        {
-          echo "Sleeping in timeout"
-          sleep 12
+      }
+      stage("Timeout") {
+        steps {
+          timeout(time: 10, unit:'SECONDS') {
+            echo "Sleeping in timeout"
+            sleep 12
         }
       }
     }

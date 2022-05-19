@@ -6,9 +6,9 @@ pipeline {
         customWorkspace "/home/helloworld"
     }
   }
-  stages{
+  stages {
     stage("build") {
-      steps{
+      steps {
         echo "Hello World"
       }
     }

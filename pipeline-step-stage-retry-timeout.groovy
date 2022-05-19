@@ -18,12 +18,12 @@ pipeline {
           error "error in retry"
         }
       }
+    }
       stage("Timeout") {
         steps {
           timeout(time: 10, unit:'SECONDS') {
             echo "Sleeping in timeout"
             sleep 12
-        }
       }
     }
   }

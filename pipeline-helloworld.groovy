@@ -9,7 +9,7 @@ pipeline {
   stages{
     stage("build") {
       steps{
-        echo "Hello World" > file.log
+        echo "Hello World"
       }
     }
   }

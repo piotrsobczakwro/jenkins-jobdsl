@@ -11,8 +11,10 @@ pipeline {
   stages {
     stage("Build") {
       steps {
+        //retry option
         retry(3) {
           echo "Retry option"
+          //error in retry
           error "error in retry"
         }
         sleep 2

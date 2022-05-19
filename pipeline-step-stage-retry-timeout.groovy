@@ -17,7 +17,6 @@ pipeline {
         }
         sleep 2
         echo "afer retry "
-        }
       }
     }
   }

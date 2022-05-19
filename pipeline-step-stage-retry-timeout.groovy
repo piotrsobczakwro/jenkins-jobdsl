@@ -19,6 +19,11 @@ pipeline {
         }
         sleep 2
         echo "afer retry "
+        timeout(time: 10, unit:'SECONDS')
+        {
+          echo "Sleeping in timeout"
+          sleep 12
+        }
       }
     }
   }

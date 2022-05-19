@@ -19,8 +19,8 @@ pipeline {
           else
             println("You are not Peter")
           
-        sleep 2
-        echo "Hello world - end "
+        sleep 10
+        echo "Hello world after 10secounds "
         }
       }
     }

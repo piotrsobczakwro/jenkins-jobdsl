@@ -74,7 +74,7 @@ pipeline {
 
     stage('anyOf correct values') {
       when {
-        anyoOf {
+        anyOf {
           environment name: "version", value: "1.0"
           environment name: "some_name", value: "jeff"
         }

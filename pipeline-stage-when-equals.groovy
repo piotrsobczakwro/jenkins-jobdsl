@@ -6,7 +6,7 @@ pipeline {
   stages {
     stage('Build') {
       when {
-            equals expected: 'jeff', value: some_name
+            equals expected: 'jeff', actual: some_name
       }
       steps {
         echo "You are on prod... "

@@ -8,7 +8,7 @@ pipeline {
             branch 'main'
       }
       steps {
-        echo "You are on prod... "
+        echo "You are on prod...on multibranch "
       }
     }
     stage('Build on branch dev') {
@@ -16,7 +16,7 @@ pipeline {
             branch 'dev'
       }
       steps {
-        echo "You are on dev... "
+        echo "You are on dev... on multibranch"
       }
     }
 

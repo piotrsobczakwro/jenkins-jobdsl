@@ -92,7 +92,7 @@ pipeline {
         }
       }
       steps {
-        echo "Building anyOf"
+        echo "Building incorrect anyOf"
       }
     }
   }

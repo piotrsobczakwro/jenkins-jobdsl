@@ -2,15 +2,14 @@ pipeline {
   agent any
   stages {
     stage('Build') {
-      options:
-      {
-        retry(3)
-      }
       tools {
         maven 'maven_3_8_5'
       }
+      options {
+        retry(3)
+      }
       steps {
-        sh echo 'before'
+        echo "before"
         sh 'mvn --version'
         error "After error"
       }

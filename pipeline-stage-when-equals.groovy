@@ -26,10 +26,21 @@ pipeline {
       }
     }
 
-    stage('expression condition') {
+    stage('expression condition correct version') {
       when {
         expression {
           version == "1.0"
+        }
+      }
+      steps {
+        echo "Building ..."
+      }
+    }
+  
+    stage('expression condition incorrect version') {
+      when {
+        expression {
+          version == "2.0"
         }
       }
       steps {

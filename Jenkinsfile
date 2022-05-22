@@ -13,7 +13,7 @@ pipeline {
     }
     stage('Build on branch dev') {
       when {
-            branch 'madevin'
+            branch 'dev'
       }
       steps {
         echo "You are on dev... "

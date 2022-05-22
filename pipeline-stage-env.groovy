@@ -10,8 +10,9 @@ pipeline {
 
   stages {
     stage('Build') {
-      name3 = "Jessie"
-    
+      environment {
+        name3 = "Jessie"
+      }
     steps {
       echo "name ${name1}"
       echo "name ${name2}"

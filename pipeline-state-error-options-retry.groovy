@@ -17,6 +17,7 @@ pipeline {
     stage('Build with failure') {
       steps {
         script {
+          // variable in jenkins 
           currentBuild.result = "FAILURE"
         }
       }

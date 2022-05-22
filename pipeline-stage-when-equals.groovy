@@ -2,6 +2,7 @@ pipeline {
   agent any
   environment{
     some_name = 'jeff'
+    version = "1.0"
   }
   stages {
     stage('Build') {
@@ -20,6 +21,17 @@ pipeline {
       }
       steps {
         echo "when not ... "
+      }
+    }
+    stage('expression condition') {
+      when {
+          expression {
+            version == "1.0"
+          }
+        }
+      }
+      steps {
+        echo "Building ..."
       }
     }
   }

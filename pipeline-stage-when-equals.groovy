@@ -48,7 +48,7 @@ pipeline {
       }
     }
 
-    stage('alloff ') {
+    stage('alloff correct values') {
       when {
         allOf {
           environment name: "version", value: "1.0"
@@ -60,5 +60,17 @@ pipeline {
       }
     }
 
+    stage('alloff one incorrect values') {
+      when {
+        allOf {
+          environment name: "version", value: "2.0"
+          environment name: "some_name", value: "jeff"
+        }
+      }
+      steps {
+        echo "Building allOf"
+      }
+    }
+    
   }
 }

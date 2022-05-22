@@ -28,9 +28,8 @@ pipeline {
 
     stage('expression condition') {
       when {
-          expression {
-            version == "1.0"
-          }
+        expression {
+          version == "1.0"
         }
       }
       steps {

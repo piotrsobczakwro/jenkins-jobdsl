@@ -80,9 +80,20 @@ pipeline {
         }
       }
       steps {
-        echo "Building allOf"
+        echo "Building anyOf"
       }
     }
-    
+
+    stage('anyOf incorrect values') {
+      when {
+        anyOf {
+          environment name: "version", value: "2.0"
+          environment name: "some_name", value: "jeff"
+        }
+      }
+      steps {
+        echo "Building anyOf"
+      }
+    }
   }
 }

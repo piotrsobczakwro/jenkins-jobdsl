@@ -10,7 +10,7 @@ pipeline {
 
   stages {
     stage('Build') {
-      name3 = Jessie
+      name3 = "Jessie"
     
     steps {
       echo "name ${name1}"

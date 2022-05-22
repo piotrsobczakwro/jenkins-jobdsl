@@ -71,6 +71,18 @@ pipeline {
         echo "Building allOf"
       }
     }
+
+    stage('anyOf correct values') {
+      when {
+        anyoOf {
+          environment name: "version", value: "1.0"
+          environment name: "some_name", value: "jeff"
+        }
+      }
+      steps {
+        echo "Building allOf"
+      }
+    }
     
   }
 }

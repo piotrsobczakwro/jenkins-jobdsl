@@ -16,5 +16,12 @@ pipeline {
       echo "name ${name2}"
       echo "name ${name3}"
     }
+    stage('TEST') {
+      steps{
+        echo "name ${name1}"
+        echo "name ${name2}"
+        echo "name ${name3}" 
+      }
+    }
   }
 }

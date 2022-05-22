@@ -6,7 +6,7 @@ pipeline {
   stages {
     stage('Build') {
       when {
-        environment name :  'production'
+        environment name:  'production'
       }
       steps {
         echo "You are on prod... "

@@ -5,6 +5,7 @@ pipeline {
     version = "1.0"
   }
   stages {
+
     stage('Build') {
       when {
             equals expected: 'jeff', actual: some_name
@@ -13,6 +14,7 @@ pipeline {
         echo "You are on prod... "
       }
     }
+
    stage('Build when not') {
       when {
         not{
@@ -23,6 +25,7 @@ pipeline {
         echo "when not ... "
       }
     }
+
     stage('expression condition') {
       when {
           expression {

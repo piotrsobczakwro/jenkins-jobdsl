@@ -25,7 +25,8 @@ pipeline {
       steps {
         script {
           // variable in jenkins 
-          echo "hello world"
+          echo 
+          "hello world with timestamp"
         }
       }
     }

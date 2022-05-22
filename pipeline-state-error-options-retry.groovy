@@ -16,7 +16,9 @@ pipeline {
     }
     stage('Build with failure') {
       steps {
-        script currentBuild.result = "FAILURE"
+        script {
+          currentBuild.result = "FAILURE"
+        }
       }
     }
   }

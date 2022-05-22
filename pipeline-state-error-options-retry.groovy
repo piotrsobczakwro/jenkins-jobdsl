@@ -13,6 +13,10 @@ pipeline {
         sh 'mvn --version'
         error "After error"
       }
+    stage('Build with failure') {
+      steps {
+        script currentBuild.result = "FAULURE"
+      }
     }
   }
 }

@@ -22,12 +22,11 @@ pipeline {
         error "After error"
       }
     }
-    stage('Build with failure') {
+    stage('TEST') {
       steps {
         script {
           // variable in jenkins 
           echo "hello world"
-          currentBuild.result = "FAILURE"
         }
       }
     }

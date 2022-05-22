@@ -2,7 +2,6 @@
 
 pipeline {
   agent any
-  
   stages {
     stage('Build') {
       tools {
@@ -23,7 +22,7 @@ pipeline {
       steps {
         script {
           // variable in jenkins 
-          /currentBuild.result = "FAILURE"
+          currentBuild.result = "FAILURE"
         }
       }
     }

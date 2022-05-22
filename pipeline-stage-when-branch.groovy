@@ -12,7 +12,7 @@ pipeline {
       }
     }
 
-    stage('Build on branch main') {
+    stage('Build on branch dev') {
       when {
             branch 'dev'
       }

@@ -26,6 +26,7 @@ pipeline {
       steps {
         script {
           // variable in jenkins 
+          echo "hello world"
           currentBuild.result = "FAILURE"
         }
       }

@@ -19,7 +19,6 @@ pipeline {
       steps {
         echo "before"
         sh 'mvn --version'
-        error "After error"
       }
     }
     stage('TEST') {

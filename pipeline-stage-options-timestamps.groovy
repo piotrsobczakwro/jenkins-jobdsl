@@ -15,7 +15,7 @@ pipeline {
       //   retry(3)
       //   //timestamp option in stage 
       //   timestamps()
-      }
+      // }
       steps {
         echo "before"
         sh 'mvn --version'
